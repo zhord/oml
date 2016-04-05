@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "config\base_config.h"
+#include "config/base_config.h"
 
 
 int main(int argc, char** argv)
