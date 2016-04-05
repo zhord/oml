@@ -1,6 +1,7 @@
 #pragma once
-
-#include "targetver.h"
+#ifdef _WIN32
+	#include "targetver.h"
+#endif
 
 // STL
 #include <string>
