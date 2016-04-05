@@ -73,25 +73,25 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IncludePath>W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -156,7 +156,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\_src\agent\config\base_config.h" />
     <ClInclude Include="..\..\_src\agent\stdafx.h" />
-    <ClInclude Include="..\..\_src\agent\targetver.h" />
+    <ClInclude Include="..\..\_src\common\file_utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\_src\agent\agent.cpp" />
@@ -167,6 +167,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\..\_src\common\file_utils.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

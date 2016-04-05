@@ -16,16 +16,25 @@
     <Filter Include="Header Files\config">
       <UniqueIdentifier>{4c0ee41c-e1fd-4ed8-a2f9-024d88cdfbc6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{3fd94b38-c6ae-46db-b79d-94963936b0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{f3b164bd-6767-4a12-b346-b2c8eb26aea5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{dede933c-3b82-47ec-ba08-42720f1c0741}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\_src\agent\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\_src\agent\targetver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\_src\agent\config\base_config.h">
       <Filter>Header Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_src\common\file_utils.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +45,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\_src\agent\config\base_config.cpp">
-      <Filter>Header Files\config</Filter>
+      <Filter>Source Files\config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_src\common\file_utils.cpp">
+      <Filter>Source Files\common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
