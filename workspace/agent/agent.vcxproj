@@ -73,25 +73,25 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\_src\;$(SolutionDir)..\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\_src\;$(SolutionDir)..\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
-    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\_src\;$(SolutionDir)..\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(SolutionDir)..\_obj\$(TargetName)\$(PlatformShortName)\$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)..\_bin\$(TargetName)\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IncludePath>W:\_projects_\oml\_src\;W:\_projects_\oml\_src\agent;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\_src\;$(SolutionDir)..\_src\agent;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -157,6 +157,7 @@
     <ClInclude Include="..\..\_src\agent\config\base_config.h" />
     <ClInclude Include="..\..\_src\agent\stdafx.h" />
     <ClInclude Include="..\..\_src\common\file_utils.h" />
+    <ClInclude Include="..\..\_src\common\string_utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\_src\agent\agent.cpp" />

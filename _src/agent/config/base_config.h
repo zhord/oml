@@ -6,7 +6,7 @@
 struct source_site
 {
     std::string url_;
-    std::string schema_;
+    bool        is_https_;
     bool        is_valid_;
 };
 

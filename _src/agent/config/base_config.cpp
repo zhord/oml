@@ -25,9 +25,20 @@ bool base_config::load_from_file(const std::string& path)
 
 bool base_config::load_from_raw_buffer(const std::string& buffer)
 {
-#ifdef OML_LOG
-    std::cout << "base_config::load_from_raw_buffer( " << buffer.c_str() << " )" << std::endl;
-#endif
+    auto buffer_tokens = GetStringTokens(buffer, " ,\r\n");
+    for (auto url : buffer_tokens)
+    {
+        bool is_http  = (url.find("http://")  != std::string::npos);
+        bool is_https = (url.find("https://") != std::string::npos);
+
+        if (!is_http && !is_https)
+        {
+            url.insert(0, "http://");
+            is_http = true;
+        }
+
+        source_sites_.insert({ url, is_https, true });
+    }
 
     return true;
 }

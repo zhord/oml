@@ -19,3 +19,5 @@
 #include <map>
 #include <algorithm>
 #include <fstream>
+
+#include "common\string_utils.h"
